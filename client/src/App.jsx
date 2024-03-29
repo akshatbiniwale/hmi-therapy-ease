@@ -4,19 +4,17 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Counsellor from "./pages/Counsellor";
 
 const App = () => {
-	return(
-	 <>
-	 <Router>
+  return (
+    <>
+      <Router>
         <div className="container">
           <Routes>
-            <Route exact path="/counsellor" element={<Counsellor />}>
-            </Route>
+            <Route exact path="/counsellor" element={<Counsellor />}></Route>
           </Routes>
         </div>
       </Router>
-	</>
-
-	);
+    </>
+  );
 };
 
 export default App;
