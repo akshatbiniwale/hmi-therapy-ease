@@ -1,86 +1,3 @@
-.i-phone-x-or-newer {
-  margin: -0.2px 2.7px 15.3px 17px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: calc(100% - 19.7px);
-  box-sizing: border-box;
-}
-
-.ellipse-153,
-.ellipse-1531,
-.ellipse-15322 {
-  opacity: 0.8;
-  border-radius: 25px;
-  background-color: #55a06f;
-  position: absolute;
-  top: 11px;
-  right: 0px;
-  width: 50px;
-  height: 50px;
-}
-
-.ellipse-3,
-.ellipse-32,
-.ellipse-229 {
-  border-radius: 17.5px;
-  background: url('https://fn12.com/api/clusters/cluster-fn12-prod-asia-southeast1/trialprojects/trial-NdUzzWJnFJswTkvRCy9c5C/assets/images/1ef3cb094ff3b3a9e6752d578ee3ecaf529c59f7?Expires=1712301473&KeyName=fn12-cdn&Signature=Be3mxCZsCueNnITAMHLs9Ipbm0I=') 50% / cover no-repeat;
-  position: relative;
-  width: 35px;
-  height: 35px;
-  margin: 2.1px 0 0 0;
-}
-
-.delivery-time {
-  background: url('https://fn12.com/api/clusters/cluster-fn12-prod-asia-southeast1/trialprojects/trial-NdUzzWJnFJswTkvRCy9c5C/assets/images/684c80acdd9a277baf90f7a214dca68709291afc?Expires=1712301473&KeyName=fn12-cdn&Signature=vOcJ7FztVIVt0_qGUYvrpyVR0jQ=') 50% / contain no-repeat;
-  position: relative;
-  width: 39px;
-  height: 31px;
-}
-
-.welcome-back-sarina,
-.welcome-back-sarina-23,
-.welcome-back-sarina-sub43,
-.welcome-back-sarina-sub44 {
-  font-family: 'Urbanist';
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.333;
-}
-
-.group,
-.group-24 {
-  position: absolute;
-  top: 8px;
-  right: 13.4px;
-  width: 19.2px;
-  height: 24px;
-}
-
-.ellipse-5,
-.ellipse-527 {
-  position: absolute;
-  left: 50%;
-  top: 0px;
-  transform: translateX(-50%);
-  width: 21px;
-  height: 17.9px;
-}
-
-.faquote-left,
-.vector-31 {
-  width: 24px;
-  height: 20px;
-}
-
-.rectangle-62,
-.rectangle-63,
-.rectangle-64,
-.rectangle-65 {
-  border-radius: 1234px;
-  background-color: #4f3422;
-}
-
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -103,10 +20,29 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.card-green {
+  background-color: #55A06F;
+  flex: 1;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
 .text {
   text-align: center;
   margin-right: 10px;
   /* Adjust the space between text and image */
+  color: white;
+  font-size: 1.2rem;
 }
 
 .image-container {
@@ -117,7 +53,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: green;
+  background-color: #55A06F;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,7 +71,9 @@
 
 .underline {
   text-decoration: underline;
-  text-decoration-color: brown;
+  text-decoration-color: #4f3422;
   text-decoration-thickness: 4px;
-  /* You can adjust the thickness here */
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
 }

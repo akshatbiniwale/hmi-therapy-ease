@@ -1,7 +1,30 @@
 import React from "react";
 import "../css/Counsellor.css";
+import MessageSection from "./MessageSection";
 
 export default function Counsellor() {
+  const [messageCount, setMessageCount] = React.useState(0);
+  const [messages, setMessages] = React.useState([]);
+  const [healthScoreData, setHealthScoreData] = React.useState({
+    labels: [],
+    data: [],
+  });
+
+  // Dummy data for messages and health score
+  React.useEffect(() => {
+    // Fetch messages and health score data from API or any other source
+    const dummyMessages = ["Message 1", "Message 2", "Message 3"];
+    const dummyHealthScoreData = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+      data: [80, 85, 90, 85, 88],
+    };
+
+    // Set the state variables with dummy data
+    setMessageCount(dummyMessages.length);
+    setMessages(dummyMessages);
+    setHealthScoreData(dummyHealthScoreData);
+  }, []);
+
   return (
     <>
       <div className="center mt-3 mb-3 ml-3">
@@ -45,7 +68,7 @@ export default function Counsellor() {
           </div>
           <div className="image-container">
             <div className="profile-image">
-              <i className="profile-icon">Icon</i>
+              <img src="src\images\profile.png" alt="" srcset="" />
             </div>
           </div>
         </div>
@@ -57,19 +80,27 @@ export default function Counsellor() {
           </div>
           <div className="image-container">
             <div className="profile-image">
-              <i className="profile-icon">Icon</i>
+              <img src="src\images\clock.png" alt="" srcset="" />
             </div>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card-green">
           <div class="text-center">
             <h2>
-              <span class="underline">Let's Go</span>
+              <span className="underline">Let's Go</span>
             </h2>
           </div>
         </div>
       </div>
+
+
+      {/* <MessageSection
+        messageCount={messageCount}
+        messages={messages}
+        healthScoreData={healthScoreData}
+      /> */}
+
     </>
   );
 }
