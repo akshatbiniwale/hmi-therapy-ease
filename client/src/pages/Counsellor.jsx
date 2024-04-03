@@ -20,24 +20,24 @@ const Message = ({ profilePic, username, message, isLast }) => (
 const chartData = {
   labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
   person1: {
-    name: "Person 1",
+    name: "Hatim",
     scores: [30, 50, 25, 85],
   },
   person2: {
-    name: "Person 2",
-    scores: [60, 65, 70, 75],
+    name: "Anish",
+    scores: [60, 65, 50, 35],
   },
 };
 
 const Counsellor = () => {
   return (
     <>
-      <div className="center mt-3 mb-3 ml-3">
+      <div className="size center mt-3 mb-3 ml-3">
         Good Morning, <span className="font-bold">Vineet!</span>
       </div>
 
-      <div className="rounded-[16px] border-[1px_solid_#F4F4F4] bg-[#F8F6F6] m-[0_14px_20px_9px] flex flex-row justify-between p-[20.5px_11.5px_17.5px_14.5px] w-[calc(100%_-_23px)] box-sizing-border">
-        <span className="break-words font-['Urbanist'] font-normal text-[14px] tracking-[-0.1px] leading-[1.429] text-[#707070]">
+      <div className="sizerounded-[16px] border-[1px_solid_#F4F4F4] bg-[#F8F6F6] m-[0_14px_20px_9px] flex flex-row justify-between p-[20.5px_11.5px_17.5px_14.5px] w-[calc(100%_-_23px)] box-sizing-border">
+        <span className="break-words font-['Urbanist'] tracking-[-0.1px] leading-[1.429] text-[#707070] desc">
           “It is better to conquer yourself than to win a thousand battles”
         </span>
         <span>
@@ -50,7 +50,7 @@ const Counsellor = () => {
       </div>
 
       <div className="ml-3 m-[0_0_15px_0] inline-block self-start break-words font-['Montserrat'] font-bold text-[17px] text-[var(--blue,#04004F)]">
-        Today's Plan
+        <span className="size">Today's Plan</span>
       </div>
 
       <div className="card-container">
@@ -101,40 +101,42 @@ const Counsellor = () => {
 
       {/* Message Section */}
 
-      <div className="left-section">
-        <div className="message-section">
-          <Message
-            profilePic="src\images\profile.png"
-            username="User1"
-            message="Lorem ipsum dolor sit amet"
-            isLast={false} // Assuming this is not the last message
-          />
-          <Message
-            profilePic="src\images\profile.png"
-            username="User1"
-            message="Lorem ipsum dolor sit amet"
-            isLast={false} // Assuming this is not the last message
-          />
-          <Message
-            profilePic="src\images\profile.png"
-            username="User1"
-            message="Lorem ipsum dolor sit amet"
-            isLast={false} // Assuming this is not the last message
-          />
-          <Message
-            profilePic="src\images\profile.png"
-            username="User2"
-            message="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            isLast={true} // Assuming this is the last message
-          />
-          {/* Add more messages as needed */}
+      <div className="container">
+        <div className="left-section">
+          <div className="message-section">
+            <Message
+              profilePic="src\images\profile.png"
+              username="User1"
+              message="Lorem ipsum dolor sit amet"
+              isLast={false} // Assuming this is not the last message
+            />
+            <Message
+              profilePic="src\images\profile.png"
+              username="User1"
+              message="Lorem ipsum dolor sit amet"
+              isLast={false} // Assuming this is not the last message
+            />
+            <Message
+              profilePic="src\images\profile.png"
+              username="User1"
+              message="Lorem ipsum dolor sit amet"
+              isLast={false} // Assuming this is not the last message
+            />
+            <Message
+              profilePic="src\images\profile.png"
+              username="User2"
+              message="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              isLast={true} // Assuming this is the last message
+            />
+            {/* Add more messages as needed */}
+          </div>
         </div>
-      </div>
 
-      {/* Chart Section */}
-      <div className="right-section">
-        {/* Render the LineChart component and pass chartData as prop */}
-        <LineChart data={chartData} />
+        {/* Chart Section */}
+        <div className="right-section">
+          {/* Render the LineChart component and pass chartData as prop */}
+          <LineChart data={chartData} />
+        </div>
       </div>
     </>
   );
